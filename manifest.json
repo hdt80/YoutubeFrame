@@ -12,22 +12,12 @@
 
     "content_scripts": [
         {
-            "matches": ["*://youtube.com/watch*"],
+            "matches": ["*://www.youtube.com/watch*"],
             "js": ["content_script.js"]
         }
     ],
 
-    "background": {
-        "scripts": ["background.js"],
-        "persistent": true
-    },
-
     "web_accessible_resources": [
         "youtube_frame.js"
-    ],
-
-    "permissions": [
-        "tabs", "*://youtube.com/watch*"
     ]
-
 }

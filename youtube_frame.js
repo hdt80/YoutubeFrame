@@ -21,8 +21,8 @@ YoutubeFrame = function() {
         ytPlayer.seekBy(amount * (1 / FPS));
     }
 
+    // Find the controls and add our own 
     if (document.getElementsByClassName("ytp-chrome-controls")[0]) {
-
         document.addEventListener("keydown", function(k) {
             switch (k.which) {
                 case PREV_FRAME_BUTTON:
@@ -30,10 +30,10 @@ YoutubeFrame = function() {
                     break;
                 case NEXT_FRAME_BUTTON:
                     NextFrame(1);
+                    break;
             }
         }, false);
     }
-
 }
 
 window.onload(YoutubeFrame());
